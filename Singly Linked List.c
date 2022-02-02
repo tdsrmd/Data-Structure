@@ -74,11 +74,11 @@ void display(){
   if (head==NULL){
     printf("\nList is Empty\n\n");
   } else{
-    struct node *temp = head;
+    struct node *key = head;
     printf("\nNodes\n");
-    while (temp != NULL){
-      printf("%d ",temp->data);
-      temp=temp->next;
+    while (key != NULL){
+      printf("%d ",key->data);
+      key=key->next;
     }
     printf("\n\n");
   }
