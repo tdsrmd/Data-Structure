@@ -1,68 +1,68 @@
 #include "stdio.h"
 #include "stdlib.h"
 
-struct node{
+struct node {
   int data;
   struct node *next;
 };
 struct node *head = NULL;
 struct node *tail = NULL;
 
-void insertBeg(){
-  struct node *newNode = (struct node*)malloc(sizeof(struct node));
+void insertBeg() {
+  struct node *newNode = (struct node *)malloc(sizeof(struct node));
   printf("Enter value:");
   int num;
   scanf_s("%d", &num);
   newNode->data = num;
-  if (head == NULL){
+  if (head == NULL) {
     newNode->next = NULL;
     head = tail = newNode;
     printf("\nNode created \n\n");
-  }else{
+  } else {
     newNode->next = head;
     head = newNode;
     printf("\nNode added \n\n");
   }
 }
-void insertEnd(){
-  struct node *newNode = (struct node*)malloc(sizeof(struct node));
+void insertEnd() {
+  struct node *newNode = (struct node *)malloc(sizeof(struct node));
   printf("Enter value:");
   int num;
   scanf_s("%d", &num);
   newNode->data = num;
-  if (head == NULL){
-    newNode->next=NULL;
+  if (head == NULL) {
+    newNode->next = NULL;
     head = tail = newNode;
     printf("\nNode created \n\n");
-  }else{
+  } else {
     newNode->next = NULL;
     tail->next = newNode;
     tail = newNode;
     printf("\nNode added \n\n");
   }
 }
-void deleteBeg(){
-  if (head == NULL){
+void deleteBeg() {
+  if (head == NULL) {
     printf("\nList is empty\n\n");
-  }else{
+  } else {
     struct node *temp = head;
     head = head->next;
     free(temp);
     printf("\nNode deleted from the beginning\n\n");
   }
 }
-void deleteEnd(){
-  if (head == NULL){
+void deleteEnd() {
+  if (head == NULL) {
     printf("\nList is empty\n\n");
-  }else if (head ->next == NULL){
+  } else if (head->next == NULL) {
     head = tail = NULL;
     free(head);
     free(tail);
     printf("\nDeleted a single node of the list\n\n");
-  }else{
+  } else {
     struct node *key = head;
     struct node *temp = tail;
-    while(key->next != tail){
+    while (key->next != tail) {
       key = key->next;
     }
     free(temp);
@@ -71,15 +71,15 @@ void deleteEnd(){
     printf("\nNode deleted from the last\n\n");
   }
 }
-void display(){
-  if (head==NULL){
+void display() {
+  if (head == NULL) {
     printf("\nList is Empty\n\n");
-  } else{
+  } else {
     struct node *key = head;
     printf("\nNodes\n");
-    while (key != NULL){
-      printf("%d ",key->data);
-      key=key->next;
+    while (key != NULL) {
+      printf("%d ", key->data);
+      key = key->next;
     }
     printf("\n\n");
   }
@@ -95,15 +95,25 @@ int main() {
     printf("5-Display \n");
     printf("6-Exit \n");
     printf("Enter value:");
-    scanf_s("%d",&option);
+    scanf_s("%d", &option);
     switch (option) {
-    case 1: insertBeg(); break;
-    case 2: insertEnd(); break;
-    case 3: deleteBeg(); break;
-    case 4: deleteEnd(); break;
-    case 5: display(); break;
+    case 1:
+      insertBeg();
+      break;
+    case 2:
+      insertEnd();
+      break;
+    case 3:
+      deleteBeg();
+      break;
+    case 4:
+      deleteEnd();
+      break;
+    case 5:
+      display();
+      break;
     }
 
-  }while(option != 6);
+  } while (option != 6);
   return 0;
 }
