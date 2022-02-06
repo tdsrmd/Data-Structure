@@ -1,35 +1,33 @@
 # Data-Structure
 
 ##### Singly Linked List
-- Insert at beginning function
-- Insert at end function
-- Delelete at beginning function
-- Delete at end function
-- Display function
+<ul>
+  <li>Insert at beginning function</li>
+  <li>Insert at end function</li>
+  <li>Delelete at beginning function</li>
+  <li>Delete at end function</li>
+  <li>Display function</li>
+</ul>
 
 ##### Linked List
-- Insert at beginning function
-- Insert at end function
-- Delelete at beginning function
-- Delete at end function
-- Display function
+<ul>
+  <li>Insert at beginning function</li>
+  <li>Insert at end function</li>
+  <li>Delelete at beginning function</li>
+  <li>Delete at end function</li>
+  <li>Display function</li>
+</ul>
 
 ##### Binary Tree Search
-- Create new node function
-- Insert node function
-- Delelete node function
-- Tree Traversal
--- In order traversal
--- Pre order traversal
--- Post order traversal
 <ul>
-  <li>First item</li>
-  <li>Second item</li>
-  <li>Third item
+  <li>Create new node function</li>
+  <li>Insert node function</li>
+  <li>Delelete node function</li>
+  <li>Tree Traversal
     <ul>
-      <li>Indented item</li>
-      <li>Indented item</li>
+      <li>In order traversal</li>
+      <li>Pre order traversal</li>
+      <li>Post order traversal</li>
     </ul>
   </li>
-  <li>Fourth item</li>
 </ul>
